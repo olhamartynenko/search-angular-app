@@ -1,0 +1,25 @@
+<form
+  [formGroup]="searchForm"
+  (submit)="onSubmit()"
+  class="search-form d-flex align--center"
+>
+  <input
+    formControlName="search"
+    type="text"
+    placeholder="Type city name here..."
+    aria-label="Search city"
+    class="search-form__form-control"
+  />
+
+  <button
+    class="search-form__button submit-button"
+    [disabled]="searchForm.invalid"
+    type="submit"
+  >
+    Search
+  </button>
+
+  <button class="search-form__button" type="text" (click)="onResetSearch()">
+    Reset
+  </button>
+</form>

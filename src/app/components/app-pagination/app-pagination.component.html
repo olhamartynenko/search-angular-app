@@ -1,0 +1,10 @@
+<ul *ngIf="pages.length > 1" class="pages d-flex-justify--center">
+  <li
+    *ngFor="let page of pages; trackBy: trackByPage"
+    class="pages__page page d-flex-justify--center align--center"
+    [class.active]="page === currentPage"
+    (click)="onPageChanged(page)"
+  >
+    {{ page }}
+  </li>
+</ul>

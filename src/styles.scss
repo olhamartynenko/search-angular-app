@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex-justify--center {
+  display: flex;
+  justify-content: center;
+}
+
+.align--center {
+  align-items: center;
+}
+
+.icon-button {
+  height: 22px;
+  width: 22px;
+  border: none;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}

@@ -1,0 +1,8 @@
+<ul class="cities-list">
+  <li
+    *ngFor="let city of cities; trackBy: trackByCityId"
+    class="cities-list__item"
+  >
+    <city-card [city]="city" (updateCity)="onUpdateCity($event)"> </city-card>
+  </li>
+</ul>

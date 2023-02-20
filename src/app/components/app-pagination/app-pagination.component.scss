@@ -1,0 +1,25 @@
+@import "src/assets/variables";
+
+.pages {
+  flex-wrap: wrap;
+
+  &__page {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid $black-color;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}
+
+.active {
+  background-color: $black-color;
+  color: $white-color;
+}

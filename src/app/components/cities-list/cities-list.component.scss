@@ -1,0 +1,23 @@
+.cities-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 1260px) and (max-width: 1660px) {
+  .cities-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 860px) and (max-width: 1259px) {
+  .cities-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cities-list {
+    display: block;
+  }
+}

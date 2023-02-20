@@ -1,0 +1,51 @@
+<div class="card">
+  <div class="card__image-block image-block">
+    <img
+      [attr.src]="imageUrl"
+      class="image-block__image"
+      (error)="onLoadImageError($event)"
+    />
+
+    <input
+      *ngIf="isCardEditing"
+      id="file"
+      type="file"
+      class="image-block__file-input"
+      (change)="onImageChange($event)"
+    />
+  </div>
+
+  <div class="card__content-block">
+    <input
+      #nameInput
+      [formControl]="nameFormControl"
+      id="name"
+      type="text"
+      [readonly]="!isCardEditing"
+      class="form-control-name"
+      [class.form-control-name--disabled]="!isCardEditing"
+      autofocus
+    />
+
+    <div class="card__actions actions">
+      <button
+        *ngIf="!isCardEditing; else editCardActions"
+        class="actions__edit icon-button"
+        (click)="toggleEditCard()"
+      ></button>
+
+      <ng-template #editCardActions>
+        <button
+          class="actions__button-save icon-button"
+          type="submit"
+          (click)="onUpdateCity()"
+        ></button>
+        <button
+          class="actions__button-cancel icon-button"
+          type="button"
+          (click)="onEditCancel()"
+        ></button
+      ></ng-template>
+    </div>
+  </div>
+</div>

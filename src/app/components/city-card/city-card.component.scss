@@ -1,0 +1,57 @@
+@import "src/assets/variables";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 8px 0 rgba(201, 199, 199, 0.2),
+    0 6px 20px 0 rgba(201, 199, 199, 0.2);
+  border-radius: 10px;
+
+  &__image-block {
+    height: 280px;
+    margin-bottom: 10px;
+  }
+}
+
+.image-block {
+  &__image {
+    width: 350px;
+    height: 250px;
+    background-size: cover;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+
+  &__edit {
+    background-image: url("../../../assets/icons/edit-icon.png");
+  }
+
+  &__button-save {
+    margin-right: 5px;
+    background-image: url("../../../assets/icons/accept.png");
+  }
+
+  &__button-cancel {
+    background-image: url("../../../assets/icons/cancel.png");
+  }
+}
+
+.form-control-name {
+  padding: 4px 4px;
+  font-size: 18px;
+  border: 0.5px solid $black-color;
+  border-radius: 5px;
+  overflow: hidden;
+  outline: none;
+
+  &--disabled {
+    font-size: 20px;
+    border: none;
+  }
+}
